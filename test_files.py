@@ -24,12 +24,9 @@ def test_xlsx_file():
             print('test xlsx finished')
 
 
-
 def test_pdf_file():
     with ZipFile(ARCHIVE_FILE, 'r') as zip_file:
         with zip_file.open('test_pdf_file.pdf', 'r') as file:
             reader = PdfReader(file)
             assert len(reader.pages) == 1
             assert 'Тестовый PDF-документ' in reader.pages[0].extract_text()
-
-

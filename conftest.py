@@ -1,5 +1,4 @@
 import shutil
-import time
 import pytest
 import os
 from zipfile import ZipFile
